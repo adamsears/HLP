@@ -1,0 +1,46 @@
+week now is 1
+hour now is 12
+2014/08/03
+2014/08/02
+2014/08/01
+2014/07/31
+2014/07/30
+2014/07/29
+2014/07/28
+2014/07/27
+2014/07/26
+2014/07/25
+===========start to get the path of jhist file dir===========
+
+/mr-history/done/2014/08/03/000004/*.jhist,/mr-history/done/2014/08/03/000005/*.jhist,/mr-history/done/2014/08/02/000003/*.jhist,/mr-history/done/2014/08/02/000004/*.jhist,/mr-history/done/2014/08/02/000005/*.jhist,/mr-history/done/2014/08/01/000003/*.jhist,/mr-history/done/2014/08/01/000004/*.jhist,/mr-history/done/2014/07/31/000003/*.jhist,/mr-history/done/2014/07/31/000004/*.jhist,/mr-history/done/2014/07/30/000002/*.jhist,/mr-history/done/2014/07/30/000003/*.jhist,/mr-history/done/2014/07/29/000001/*.jhist,/mr-history/done/2014/07/29/000002/*.jhist,/mr-history/done/2014/07/29/000003/*.jhist,/mr-history/done/2014/07/28/000001/*.jhist,/mr-history/done/2014/07/28/000002/*.jhist,/mr-history/done/2014/07/27/000001/*.jhist,/mr-history/done/2014/07/26/000001/*.jhist,/mr-history/done/2014/07/25/000000/*.jhist,/mr-history/done/2014/07/25/000001/*.jhist
+=================end of get jhist file dir=================
+====================public hadoop streaming variable=============
+/home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar
+/home/hadoop/log-manager/log_analysis/bin
+/mr-history/log-analysis/
+/mr-history/log-analysis/201408/0725-0803
+/mr-history/local-service-log/201408/20140804*
+================================================================
+==========1============run memory extract hadoop streaming=============
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/cat_mapper.pl,/home/hadoop/log-manager/log_analysis/bin/get_container_max_reducer.pl -Dmapred.job.name=1_mem_ext_yaxu -mapper "perl cat_mapper.pl" -reducer "perl get_container_max_reducer.pl" -input /mr-history/local-service-log/201408/20140801*.tar.gz,/mr-history/local-service-log/201408/20140804*.tar.gz -output /mr-history/log-analysis/201408/0725-0803/1_mem_ext_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar6553746777343929977/] [] /tmp/streamjob6756270440773596295.jar tmpDir=null
+======================================================================
+===========2=============run jhist extract hadoop streaming===========
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/jhist_mapper.pl,/home/hadoop/log-manager/log_analysis/bin/jhist_reducer.pl -Dmapred.job.name=2_jhist_ext_yaxu -mapper "perl jhist_mapper.pl" -reducer "perl jhist_reducer.pl" -input /mr-history/done/2014/08/03/000004/*.jhist,/mr-history/done/2014/08/03/000005/*.jhist,/mr-history/done/2014/08/02/000003/*.jhist,/mr-history/done/2014/08/02/000004/*.jhist,/mr-history/done/2014/08/02/000005/*.jhist,/mr-history/done/2014/08/01/000003/*.jhist,/mr-history/done/2014/08/01/000004/*.jhist,/mr-history/done/2014/07/31/000003/*.jhist,/mr-history/done/2014/07/31/000004/*.jhist,/mr-history/done/2014/07/30/000002/*.jhist,/mr-history/done/2014/07/30/000003/*.jhist,/mr-history/done/2014/07/29/000001/*.jhist,/mr-history/done/2014/07/29/000002/*.jhist,/mr-history/done/2014/07/29/000003/*.jhist,/mr-history/done/2014/07/28/000001/*.jhist,/mr-history/done/2014/07/28/000002/*.jhist,/mr-history/done/2014/07/27/000001/*.jhist,/mr-history/done/2014/07/26/000001/*.jhist,/mr-history/done/2014/07/25/000000/*.jhist,/mr-history/done/2014/07/25/000001/*.jhist -output /mr-history/log-analysis/201408/0725-0803/2_jhist_ext_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar4549107500910516854/] [] /tmp/streamjob3268699148114081094.jar tmpDir=null
+=====================================================================
+========3======run jobsummary extract hadoop streaming===============
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/job_sum_mapper.pl -Dmapred.job.name=3_jobsum_ext_yaxu -mapper "perl job_sum_mapper.pl" -input /mr-history/local-service-log/201408/20140801*.tar.gz,/mr-history/local-service-log/201408/20140804*.tar.gz -output /mr-history/log-analysis/201408/0725-0803/3_jobsum_ext_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar3181980388118149632/] [] /tmp/streamjob7951910273135709010.jar tmpDir=null
+=====================================================================
+======4======run jhist_memory union hadoop streaming=================
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/union_ctn_jhi_mapper.pl,/home/hadoop/log-manager/log_analysis/bin/union_ctn_jhi_reducer.pl -Dmapred.job.name=4_jhist_mem_union_yaxu -mapper "perl union_ctn_jhi_mapper.pl" -reducer "perl union_ctn_jhi_reducer.pl" -input /mr-history/log-analysis/201408/0725-0803/1_mem_ext_out/,/mr-history/log-analysis/201408/0725-0803/2_jhist_ext_out/ -output /mr-history/log-analysis/201408/0725-0803/4_jhist_mem_union_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar214574397246617243/] [] /tmp/streamjob6187335715513295682.jar tmpDir=null
+====================================================================
+=========5=========run task_memory proccess hadoop streaming========
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/task_mapper.pl,/home/hadoop/log-manager/log_analysis/bin/task_reducer.pl -Dmapred.job.name=5_task_ctn_union_yaxu -mapper "perl task_mapper.pl" -reducer "perl task_reducer.pl" -input /mr-history/log-analysis/201408/0725-0803/4_jhist_mem_union_out/ -output /mr-history/log-analysis/201408/0725-0803/5_task_ctn_union_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar4795072409640254544/] [] /tmp/streamjob4003893564825567300.jar tmpDir=null
+===================================================================
+=========7=========run analysis proccess hadoop streaming==========
+hadoop jar /home/hadoop/hadoop-2.3.0-cdh5.0.0/share/hadoop/tools/lib/hadoop-streaming-2.3.0-cdh5.0.0.jar -files /home/hadoop/log-manager/log_analysis/bin/analysis_mapper.pl,/home/hadoop/log-manager/log_analysis/bin/analysis_reducer.pl -Dmapred.job.name=7_analysis_mr_mem_yaxu -mapper "perl analysis_mapper.pl" -reducer "perl analysis_reducer.pl" -input /mr-history/log-analysis/201408/0725-0803/5_task_ctn_union_out/ -output /mr-history/log-analysis/201408/0725-0803/7_analysis_mr_mem_out/ 
+packageJobJar: [/home/hadoop/hadoop_run_env/hadoop-unjar2015622050376253692/] [] /tmp/streamjob377184203510793779.jar tmpDir=null

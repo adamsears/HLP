@@ -1,0 +1,99 @@
+Wed Aug 27 18:25:16 CST 2014
+
+load valid hosts ...
+
+enumerate remote log conditioned files,and get it to /home/hadoop/log-manager/service_log_merge ...
+
+ssh 192.168.136.98 ls /home/hadoop/hadoop_logs/*.log.2014-08-27*
+ssh 192.168.136.98 ls /home/hadoop/hadoop_logs/*.out.*
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-00 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-00
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-01 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-01
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-02 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-02
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-03 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-03
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-04 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-04
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-05 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-05
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-06 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-06
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-07 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-07
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-08 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-08
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-09 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-09
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-10 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-10
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-11 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-11
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-12 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-12
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-13 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-13
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-14 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-14
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-15 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-15
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-16 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-16
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-17 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/hadoop-hadoop-journalnode-dn-136-098.log.2014-08-27-17
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-15 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-15
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-16 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-16
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-17 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/mapred-hadoop-historyserver-dn-136-098.log.2014-08-27-17
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-00 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-00
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-01 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-01
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-02 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-02
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-03 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-03
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-04 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-04
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-05 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-05
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-06 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-06
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-07 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-07
+
+scp hadoop@192.168.136.98:/home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-08 /home/hadoop/log-manager/service_log_merge
+ssh 192.168.136.98 rm -rf /home/hadoop/hadoop_logs/yarn-hadoop-resourcemanager-dn-136-098.log.2014-08-27-08
+Killed by signal 1.

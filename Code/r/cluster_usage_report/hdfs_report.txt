@@ -1,0 +1,4 @@
+æØ∏Ê–≈œ¢£∫
+Removed 9 rows containing missing values (geom_text).
+png 
+  2 

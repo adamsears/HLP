@@ -1,0 +1,1 @@
+${HADOOP_HOME}/bin/hadoop jar /home/hadoop/hadoop-2.2.0/share/hadoop/tools/lib/hadoop-streaming-2.2.0.jar  -files ../bin/task_mapper.pl  -input /outputtest10/ -output /outputtest12/   -mapper "perl task_mapper.pl"

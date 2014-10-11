@@ -1,0 +1,1 @@
+${HADOOP_HOME}/bin/hadoop jar /home/hadoop/hadoop-2.2.0/share/hadoop/tools/lib/hadoop-streaming-2.2.0.jar  -files ../bin/union_ctn_jhi_mapper.pl  -input /outputtest5/,/outputtest9/  -output /outputtest11/   -mapper "perl union_ctn_jhi_mapper.pl"

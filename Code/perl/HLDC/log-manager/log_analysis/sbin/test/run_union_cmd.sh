@@ -1,0 +1,1 @@
+${HADOOP_HOME}/bin/hadoop jar /home/hadoop/hadoop-2.2.0/share/hadoop/tools/lib/hadoop-streaming-2.2.0.jar  -files ../bin/union_mapper.pl,../bin/union_reducer.pl  -input /outputtest5/,/outputtest6/  -output /outputtest7/   -mapper "perl union_mapper.pl" -reducer "perl union_reducer.pl"
